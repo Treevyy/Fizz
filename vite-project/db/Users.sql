@@ -1,4 +1,5 @@
 -- Drop existing tables if they exist
+-- cascade is needed to ensure that it is taking the dependent objects as well.
 DROP TABLE IF EXISTS user_Data CASCADE;
 DROP TABLE IF EXISTS interest_options CASCADE;
 DROP TABLE IF EXISTS interest_Name CASCADE;
