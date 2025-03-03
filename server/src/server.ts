@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import userRoutes from './routes/userRoutes';
 import authRoutes from './routes/authRoutes';
+import surveyRoutes from './routes/surveyRoutes';
 import db from './models';
 
 dotenv.config();
