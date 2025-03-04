@@ -1,8 +1,8 @@
 import express from 'express'; // Import express for creating the server
 import dotenv from 'dotenv'; // Import dotenv for loading environment variables
-import userRoutes from './routes/userRoutes.js'; // Import user routes
-import authRoutes from './routes/authRoutes.js'; // Import auth routes
-import db from './models'; // Import the database models
+import userRoutes from './routes/api/userRoutes.js'; // Import user routes
+import authRoutes from './routes/api/authRoutes.js'; // Import auth routes
+import db from './models/index.js'; // Import the database models
 
 dotenv.config(); // Load environment variables from .env file
 

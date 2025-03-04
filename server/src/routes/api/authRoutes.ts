@@ -15,7 +15,7 @@ router.post('/register', async (req, res) => { // Define a POST route for user r
     const user = await User.create({ name, email, password: hashedPassword, age, gender, location, photo }); // Create a new user with the hashed password
     res.json({ success: true, user }); // Return the created user with a success message
   } catch (error) {
-    res.status(400).json({ error: error.message }); // Handle any errors with a 400 status and return the error message
+    res.status(400).json({ error: (error as Error).message }); // Handle any errors with a 400 status and return the error message
   }
 });
 
@@ -29,7 +29,7 @@ router.post('/login', async (req, res) => { // Define a POST route for user logi
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET as string, { expiresIn: '1d' }); // Generate a JWT token for the user
     res.json({ success: true, token }); // Return the token with a success message
   } catch (error) {
-    res.status(500).json({ error: error.message }); // Handle any errors with a 500 status and return the error message
+    res.status(500).json({error: (error as Error).message }); // Handle any errors with a 500 status and return the error message
   }
 });
 

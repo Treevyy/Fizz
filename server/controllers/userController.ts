@@ -30,7 +30,7 @@ export const registerUser = async (req: Request, res: Response) => {
     });
 
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET as string, {
-      expiresIn: '1h', // Generate a JWT token for the new user
+      expiresIn: '180d', // Generate a JWT token for the new user
     });
 
     res.status(201).json({ token }); // Return the token with a 201 status
@@ -57,7 +57,7 @@ export const loginUser = async (req: Request, res: Response) => {
     }
 
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET as string, {
-      expiresIn: '1h', // Generate a JWT token for the user
+      expiresIn: '180d', // Generate a JWT token for the user
     });
 
     res.json({ token }); // Return the token
