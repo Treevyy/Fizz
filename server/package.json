@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "npx tsc",
-    "start": "npm run build && node dist/server.js --ignore client",
+    "start": "npm run build && node dist/server.js",
     "dev": "npx nodemon",
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "node dist/seeds/index.js"
@@ -26,7 +26,8 @@
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.6.5",
+    "body-parser": "^1.20.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.3",
