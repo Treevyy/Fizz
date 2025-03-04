@@ -1,17 +1,7 @@
-import { Model, DataTypes } from 'sequelize';
+import { Sequelize, DataTypes } from 'sequelize';
 import { sequelize } from './database'; 
 
-class User extends Model {
-  public name!: string;
-  public email!: string;
-  public password!: string;
-  public age!: number;
-  public gender!: string;
-  public location!: string;
-  public photo!: string;
-}
-
-User.init(
+const User = sequelize.define ('User',
   {
     
     name: {
@@ -44,9 +34,7 @@ User.init(
       allowNull: true,
     },
   },
-  {
-    sequelize,
-    tableName: 'usersData',
-  }
-);
+  {  
+    tableName: 'usersData',  
+});
 export { User };
