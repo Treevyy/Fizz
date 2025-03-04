@@ -16,9 +16,10 @@ const sequelize = new Sequelize(
 
 const db: any = {};
 
-db.Sequelize = Sequelize;
-db.sequelize = sequelize;
-
+// Initialize models
 db.User = userModel(sequelize);
+
+// Sync models with the database
+sequelize.sync();
 
 export default db;

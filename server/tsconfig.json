@@ -6,6 +6,7 @@
     "esModuleInterop": true, /* Ensure compatibility with CommonJS modules */
     /* Emit */
     "outDir": "dist", /* Specify an output folder for all emitted files. */
+    "strict": true, // Enable strict mode
     // "noEmitOnError": true /* Disable emitting files if any type checking errors are reported. */
   },
   "include": ["src"],
