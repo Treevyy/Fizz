@@ -1,3 +1,5 @@
+const { FOREIGNKEYS } = require("sequelize/lib/query-types");
+
 // filepath: /c:/Users/mrsch/Fizz/models/user.js
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
@@ -16,11 +18,13 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   });
-
+// defines the associations 
   User.associate = (models) => {
-    // Define associations here
-  };
-
-  return User;
+    User.hasOne(models.profile,{
+      foriegnKey: 'userName',
+      as: 'profile',
+    });
+};
+ return User;
 };
 
