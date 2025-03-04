@@ -1,6 +1,6 @@
 import { Sequelize, DataTypes } from 'sequelize';
 
-const userModel = (sequelize: Sequelize, DataTypes: any) => {
+const userModel = (sequelize: Sequelize) => {
   const User = sequelize.define('User', {
     username: {
       type: DataTypes.STRING,

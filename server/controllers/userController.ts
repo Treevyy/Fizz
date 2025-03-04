@@ -3,6 +3,12 @@ import jwt from 'jsonwebtoken';
 import db from '../models';
 import { Request, Response } from 'express';
 
+interface AuthenticatedRequest extends Request {
+  user: {
+    id: string;
+  };
+}
+
 export const registerUser = async (req: Request, res: Response) => {
   const { username, email, password } = req.body;
 
@@ -57,7 +63,7 @@ export const loginUser = async (req: Request, res: Response) => {
   }
 };
 
-export const getUserProfile = async (req: Request, res: Response) => {
+export const getUserProfile = async (req: AuthenticatedRequest, res: Response) => {
   try {
     const user = await db.User.findByPk(req.user.id, {
       attributes: { exclude: ['password'] },

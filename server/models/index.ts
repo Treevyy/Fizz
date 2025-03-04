@@ -19,6 +19,6 @@ const db: any = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.User = userModel(sequelize, Sequelize);
+db.User = userModel(sequelize);
 
 export default db;

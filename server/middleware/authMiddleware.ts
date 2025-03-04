@@ -2,7 +2,11 @@ import jwt from 'jsonwebtoken';
 import db from '../models';
 import { Request, Response, NextFunction } from 'express';
 
-const authMiddleware = async (req: Request, res: Response, next: NextFunction) => {
+interface AuthenticatedRequest extends Request {
+  user?: typeof db.User;
+}
+
+const authMiddleware = async (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
   const token = req.header('Authorization')?.replace('Bearer ', '');
 
   if (!token) {
