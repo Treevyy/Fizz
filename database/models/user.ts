@@ -1,18 +1,5 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { Model, DataTypes } from 'sequelize';
-import { sequelize } from './database'; // Adjust the path as necessary
+import { sequelize } from './database'; 
 
 class User extends Model {
   public name!: string;
@@ -62,29 +49,4 @@ User.init(
     tableName: 'usersData',
   }
 );
-
 export { User };
-import { Sequelize, DataTypes } from 'sequelize';
-
-const userModel = (sequelize: Sequelize, DataTypes: any) => {
-  const User = sequelize.define('User', {
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-  });
-
-  return User;
-};
-
-export default userModel;
