@@ -1,15 +1,22 @@
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
-import { User } from './user'
+import { userModel } from '../userModel/user';
+
 dotenv.config();
 
-const fs = require('fs');
+
 const path = require('path');
-const Sequelize = require('sequelize');
+const fs = require('fs');
+
 //const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-//const config = require(__dirname + '/../config/config.json')[env];
-const db = {};
+
+interface DbInterface {
+  Sequelize?: typeof Sequelize;
+  sequelize?: Sequelize;
+  User?: ReturnType<typeof userModel>;
+}
+const db: DbInterface = {};
 
 const sequelize = new Sequelize(
   process.env.DB_NAME as string,
@@ -21,11 +28,8 @@ const sequelize = new Sequelize(
   }
 );
 
-const db: any = {};
-
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-
 db.User = userModel(sequelize, Sequelize);
 
 export default db;
