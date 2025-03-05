@@ -1,6 +1,7 @@
 import express from 'express';
-import { Matches } from '../../../database/models/matches';
-import  Questionnaire  from '../../../database/models/questionaire';
+import  Matches  from '../../../database/models/matches';
+import  Questionnaire from '../../../database/models/questionaire';
+import { QuestionnaireAttributes } from '../../../database/models/questionaire';
 
 
 const router = express.Router();
@@ -11,8 +12,8 @@ router.post('/', async (req, res) => {
         const { userId1, userId2 } =req.body;
 
  // gets the results from two users
- const questionnaire1 = await Questionnaire.findOne({ where: { userId: userId1 } });
- const questionnaire2 = await Questionnaire.findOne({ where: { userId: userId2 } });
+ const questionnaire1 = await Questionnaire.findOne({ where: { userId: userId1 } }) as QuestionnaireAttributes | null;
+ const questionnaire2 = await Questionnaire.findOne({ where: { userId: userId2 } }) as QuestionnaireAttributes | null;
 
  if (!questionnaire1 || !questionnaire2) {
    return res.status(404).json({ error: 'oops looks like it fizzled out. try again' });

@@ -13,7 +13,14 @@ const sequelize = new Sequelize(
   }
 );
 
-const Questionnaire = sequelize.define ('Questionnaire', {
+interface QuestionnaireAttributes {
+  id?: number;
+  title: string;
+  description?: string;
+  questions: any;
+}
+
+const Questionnaire = sequelize.define('Questionnaire', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -35,4 +42,5 @@ const Questionnaire = sequelize.define ('Questionnaire', {
     tableName: 'questionnaires',
 });
 
-export default Questionnaire ;
+export default Questionnaire;
+export type { QuestionnaireAttributes };
