@@ -1,9 +1,8 @@
-import { Sequelize } from 'sequelize';
+import { Sequelize, Model, ModelCtor } from 'sequelize';
 import dotenv from 'dotenv';
-import { userModel } from '../userModel/user';
+import { userModel } from './userModel';
 
 dotenv.config();
-
 
 const path = require('path');
 const fs = require('fs');
@@ -14,8 +13,9 @@ const env = process.env.NODE_ENV || 'development';
 interface DbInterface {
   Sequelize?: typeof Sequelize;
   sequelize?: Sequelize;
-  User?: ReturnType<typeof userModel>;
+  User?: ModelCtor<Model<any, any>>;
 }
+
 const db: DbInterface = {};
 
 const sequelize = new Sequelize(
@@ -30,6 +30,5 @@ const sequelize = new Sequelize(
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-db.User = userModel(sequelize, Sequelize);
-
+db.User = userModel(sequelize);
 export default db;
