@@ -1,9 +1,9 @@
 
 import express from 'express';
 import dotenv from 'dotenv';
-import userRoutes from './routes/userRoutes';
-import authRoutes from './routes/authRoutes';
-import surveyRoutes from './routes/surveyRoutes';
+import userRoutes from '../../server/src/routes/api/userRoutes';
+import authRoutes from '../../server/src/routes/api/authRoutes.js';
+import surveyRoutes from '../src/routes/surveyRoutes.js';
 import db from './models';
 
 dotenv.config(); // Load environment variables from .env file
