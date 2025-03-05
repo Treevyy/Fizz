@@ -1,17 +1,11 @@
 {
-  "extends": "./Fizz/tsconfig.json",
+  "extends": "../tsconfig.json", // Corrected path
+
   "compilerOptions": {
-    /* Modules */
-    "rootDir": "./src", /* Specify the root folder within your source files. */
-    "esModuleInterop": true, /* Enable esModuleInterop flag */
-
-    /* Emit */
-    "outDir": "./dist", /* Specify an output folder for all emitted files. */
-
-    // "noEmitOnError": true /* Disable emitting files if any type checking errors are reported. */
-
-    /* Type Checking */
-    "typeRoots": ["./node_modules/@types", "./src/types"] /* Specify multiple folders that act like `./node_modules/@types`. */
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
   "include": ["./src"]
 }
