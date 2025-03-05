@@ -1,7 +1,6 @@
 
 export { };
-
-import { Sequelize } from "sequelize";
+;
 import dotenv from 'dotenv';
 import db from "../models";
 
@@ -13,13 +12,11 @@ async function someAsyncFunction() {
 
 async function syncDatabase() {
   await someAsyncFunction();
-}
-if (db.Sequelize) {
-  await db.Sequelize?.sync({ force: true });
-  console.log(' We have successfully fizzed up');
-}
 
-// Optionally, you can create some initial data here
+if (db.sequelize) {
+  await db.sequelize.sync({ force: true });
+  console.log(' We have successfully fizzed up');
+
 await db.User?.create({
   name: 'John Doe',
   email: 'john.doe@example.com',
@@ -30,12 +27,12 @@ await db.User?.create({
   photo: null,
 });
 console.log('User data created.') 
-  } else {
+ } else {
     console.error('Sequelize instance is not defined');
   }
 }
 
-syncDatabase().catch((err) => {
+  syncDatabase().catch((err) => {
   console.error('Error syncing database:', err);
 });
 
