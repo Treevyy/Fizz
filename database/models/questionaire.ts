@@ -35,4 +35,4 @@ const Questionnaire = sequelize.define ('Questionnaire', {
     tableName: 'questionnaires',
 });
 
-export default{ Questionnaire };
+export default Questionnaire ;

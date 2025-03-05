@@ -1,5 +1,5 @@
 import express from 'express';
-import { Questionnaire } from '../../../../database/models/questionaire';
+import  Questionnaire  from '../../../../database/models/questionaire';
 
 const router = express.Router();
 
