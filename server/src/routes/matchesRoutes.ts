@@ -1,5 +1,5 @@
 import express from 'express';
-//import { Matches } from '../../../database/models/matches';
+import { Matches } from '../../../database/models/matches';
 import  Questionnaire  from '../../../database/models/questionaire';
 
 
@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
  const matchScore = calculateMatchScore(questionnaire1.questions, questionnaire2.questions);
 
  // checking to see if the score meets the criteria for a match 3 or more out of 5 
- if (matchScore) >= 3 {
+ if (matchScore >= 3) {
     // this will create a new match
     const match = await Matches.create({userId1, userId2, matchScore});
     res.status(201).json(match);
@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
     res.status(200).json({message:' POP! No matches where found.  Try Again.'});
  }
 } catch (error){
-    res.status(400).json({ error: error.message});
+    res.status(400).json({ error: (error as any).message});
 }
  });
 
