@@ -1,8 +1,7 @@
-import { Sequelize, DataTypes } from 'sequelize';
-import { sequelize } from './database'; 
+import { Sequelize, Model, DataTypes,ModelCtor } from 'sequelize';
 
-const userModel = sequelize.define ('User',
-  {
+const userModel = (sequelize: Sequelize): ModelCtor<Model<any, any>> => {
+  return sequelize.define('User', {
     
     name: {
       type: DataTypes.STRING,
@@ -37,4 +36,5 @@ const userModel = sequelize.define ('User',
   {  
     tableName: 'usersData',  
 });
+};
 export { userModel };
