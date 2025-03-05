@@ -7,8 +7,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #3c98ff, #ff6b81);
-    transition: opacity 1s ease, transform 1s ease;
+    background: #000000; 
+    /* transition: opacity 1s ease, transform 1s ease; */
     text-align: center;
     color: #fff;
   }
