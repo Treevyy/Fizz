@@ -1,6 +1,6 @@
-import { Sequelize, Model, DataTypes,ModelCtor } from 'sequelize';
+import { Sequelize, Model, DataTypes,ModelStatic } from 'sequelize';
 
-const userModel = (sequelize: Sequelize): ModelCtor<Model<any, any>> => {
+const userModel = (sequelize: Sequelize): ModelStatic<Model<any, any>> => {
   return sequelize.define('User', {
     
     name: {
@@ -37,4 +37,4 @@ const userModel = (sequelize: Sequelize): ModelCtor<Model<any, any>> => {
     tableName: 'usersData',  
 });
 };
-export default{ userModel };
+export default userModel ;

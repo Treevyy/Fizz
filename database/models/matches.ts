@@ -1,8 +1,9 @@
-import { Sequelize, DataTypes } from 'sequelize';
-import { sequelize } from './database'; 
+//import { Sequelize, Model, ModelStatic } from 'sequelize';
+//import dotenv from 'dotenv';
+ 
 
-const Matches = sequelize.define ('Matches', {
-}
+//const Matches = sequelize.define ('Matches', {
+//}
 
 
-export { Matches };  
+//export default  Matches;  
