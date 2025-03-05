@@ -1,6 +1,6 @@
 import { Sequelize, Model, ModelCtor } from 'sequelize';
 import dotenv from 'dotenv';
-import { userModel } from './userModel';
+import  userModel  from './userModel';
 
 dotenv.config();
 

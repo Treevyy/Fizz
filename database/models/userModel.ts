@@ -37,4 +37,4 @@ const userModel = (sequelize: Sequelize): ModelCtor<Model<any, any>> => {
     tableName: 'usersData',  
 });
 };
-export { userModel };
+export default{ userModel };
