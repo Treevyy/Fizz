@@ -1,6 +1,8 @@
 import { Sequelize, Model,} from 'sequelize';
 import dotenv from 'dotenv';
 import  User  from './userModel';
+import Matches from './matches';
+import Questionnaire from './questionaire';
 
 dotenv.config();
 
@@ -15,11 +17,15 @@ const sequelize = new Sequelize(
 );
 
 User.initialize(sequelize);
+Questionnaire.initialize(sequelize);
+Matches.initialize(sequelize);
 
 const db = {
   sequelize,
   Sequelize,
   User,
+  Matches,
+  Questionnaire,
 };
 
 export default db;
