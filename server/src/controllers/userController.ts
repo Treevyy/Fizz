@@ -1,13 +1,14 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import db from '../models';
+import userModel from '../../../database/models/userModel';
 import { Request, Response } from 'express';
+
 
 export const registerUser = async (req: Request, res: Response) => {
   const { username, email, password } = req.body;
 
   try {
-    const userExists = await db.User.findOne({ where: { email } });
+    const userExists = await db.user.findOne({ where: { email } });
 
     if (userExists) {
       return res.status(400).json({ message: 'User already exists' });
@@ -15,7 +16,7 @@ export const registerUser = async (req: Request, res: Response) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const user = await db.User.create({
+    const user = await db.user.create({
       username,
       email,
       password: hashedPassword,

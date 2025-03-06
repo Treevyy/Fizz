@@ -34,7 +34,8 @@ const userModel = (sequelize: Sequelize): ModelStatic<Model<any, any>> => {
     },
   },
   {  
+    modelName: 'User',
     tableName: 'usersData',  
 });
 };
-export default userModel ;
+export default userModel;

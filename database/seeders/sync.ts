@@ -1,8 +1,8 @@
 
 export { };
-;
+
 import dotenv from 'dotenv';
-import db from "../models";
+import db from "../models/db";
 
 dotenv.config();
 

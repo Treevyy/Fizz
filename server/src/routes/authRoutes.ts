@@ -2,7 +2,7 @@ import express from 'express';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
-import db from '../../../database/models';
+import db from '../../../database/models/db';
 
 //import  userModel  from '../../../database/models/userModel';
 

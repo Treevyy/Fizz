@@ -4,7 +4,7 @@ import userRoutes from './routes/userRoutes';
 import authRoutes from './routes/authRoutes';
 import questionnaireRoutes from '../src/routes/api/questionnaireRoutes';
 import matchesRoutes from './routes/matchesRoutes';
-import db from '..//../database/models';
+import db from '../../database/models/db';
 
 dotenv.config();
 
