@@ -1,15 +1,51 @@
-import { Sequelize, Model, ModelStatic } from 'sequelize';
-import dotenv from 'dotenv';
- 
-dotenv.config();
-const sequelize = new Sequelize(process.env.DATABASE_URL || '', {
-  dialect: 'postgres',
-  protocol: 'postgres',
-  logging: false,
-});
+import { Sequelize, DataTypes, Model, Optional } from 'sequelize"; 
 
-const Matches = sequelize.define('Matches', {
-});
+interface MatchesAttributes {
+  id?: number;
+  userId: number;
+  matchedUserId: number;
+  matchedAt: Date;
+}
 
+interface MatchesCreationAttributes extends Optional<MatchesAttributes, 'id'> {}
 
-export default  Matches;  
+class Matches extends Model<MatchesAttributes, MatchesCreationAttributes>
+implements MatchesAttributes {
+  public id!: number;
+  public userId!: number;
+  public matchedUserId!: number;
+  public matchedAt!: Date;
+
+  public static initialize(sequelize: Sequelize): void {
+    Matches.init(
+      {
+        id: {
+          type: DataTypes.INTEGER,
+          autoIncrement: true,
+          primaryKey: true,
+        },
+        userId: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+        },
+        matchedUserId: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+        },
+        matchedAt: {
+          type: DataTypes.DATE,
+          allowNull: false,
+        },
+      },
+      {
+        sequelize,
+        tableName: 'matches',
+      }
+    );
+  }
+}
+
+export default Matches;
+export type { MatchesAttributes };
+
+  

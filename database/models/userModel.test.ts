@@ -1,5 +1,4 @@
 import { Sequelize } from 'sequelize';
-import db from './db';
 
 describe('User Model', () => {
   let sequelize: Sequelize;
