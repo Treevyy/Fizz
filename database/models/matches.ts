@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes, Model, Optional } from 'sequelize"; 
+import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
 
 interface MatchesAttributes {
   id?: number;
