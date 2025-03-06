@@ -1,10 +1,8 @@
 import { Sequelize } from 'sequelize';
-import userModel from './userModel';
+import db from './db';
 
 describe('User Model', () => {
   let sequelize: Sequelize;
-
-  let User: ReturnType<typeof userModel>;
 
   beforeAll(async () => {
     sequelize = new Sequelize({
@@ -12,10 +10,9 @@ describe('User Model', () => {
       storage: ':memory:',
       
     });
-    // Initialize the User model
-    User = userModel(sequelize);
-    await sequelize.sync();
-  });
+    
+    await sequelize.sync(); 
+});
 
   afterAll(async () => {
     await sequelize.close();
