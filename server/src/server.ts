@@ -3,7 +3,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import userRoutes from '../../server/src/routes/api/userRoutes';
 import authRoutes from '../../server/src/routes/api/authRoutes.js';
-import surveyRoutes from '../src/routes/surveyRoutes.js';
+import surveyRoutes from '../src/routes';
 import db from './models';
 
 dotenv.config(); // Load environment variables from .env file
