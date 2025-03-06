@@ -1,18 +1,9 @@
-
-export { };
-
 import dotenv from 'dotenv';
 import db from "../models/db";
 
 dotenv.config();
 
-async function someAsyncFunction() {
-  console.log(' powerwalking through some async function..');
-}
-
 async function syncDatabase() {
-  await someAsyncFunction();
-
 if (db.sequelize) {
   await db.sequelize.sync({ force: true });
   console.log(' We have successfully fizzed up');
