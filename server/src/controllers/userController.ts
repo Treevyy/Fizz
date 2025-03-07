@@ -2,6 +2,13 @@ import bcrypt from 'bcryptjs'; // Import bcrypt for password hashing
 import jwt from 'jsonwebtoken'; // Import jsonwebtoken for creating JWT tokens
 import db from '../database/models/db'; // Import the database models
 import { Request, Response } from 'express'; // Import Request and Response types from express
+import { UserInstance } from '../types/'; 
+
+// Define the AuthenticatedRequest interface
+interface AuthenticatedRequest extends Request {
+  user: UserInstance;
+}
+
 
 // Function to register a new user
 export const registerUser = async (req: Request, res: Response) => {
