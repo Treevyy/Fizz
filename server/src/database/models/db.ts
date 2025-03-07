@@ -1,11 +1,5 @@
 import { Sequelize, Model, ModelStatic } from 'sequelize';
-import  userModel  from './userModel';
-
-interface DbInterface {
-  Sequelize: typeof Sequelize;
-  sequelize: Sequelize;
-  User: ModelStatic<Model<any, any>>;
-}
+import  User  from './userModel';
 
 const sequelize = new Sequelize(
   process.env.DB_NAME as string,
@@ -17,10 +11,10 @@ const sequelize = new Sequelize(
   }
 );
 
-const db: DbInterface = {
+const db = {
   Sequelize,
   sequelize,
-  User: userModel(sequelize),
+ User,
   };
 
 export default db;

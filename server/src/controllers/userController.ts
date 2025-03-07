@@ -1,12 +1,12 @@
-import bcrypt from 'bcryptjs'; // Import bcrypt for password hashing
+import bcrypt from 'bcryptjs'; 
 import jwt from 'jsonwebtoken'; // Import jsonwebtoken for creating JWT tokens
 import db from '../database/models/db'; // Import the database models
 import { Request, Response } from 'express'; // Import Request and Response types from express
-import { UserInstance } from '../types/'; 
 
-// Define the AuthenticatedRequest interface
 interface AuthenticatedRequest extends Request {
-  user: UserInstance;
+  user: {
+    id: string;
+  };
 }
 
 
@@ -26,14 +26,14 @@ export const registerUser = async (req: Request, res: Response) => {
     const user = await db.User.create({
       username,
       email,
-      password: hashedPassword, // Create a new user with the hashed password
+      password: hashedPassword,
     });
 
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET as string, {
-      expiresIn: '180d', // Generate a JWT token for the new user
+      expiresIn: '180d', 
     });
 
-    res.status(201).json({ token }); // Return the token with a 201 status
+    res.status(201).json({ token });
   } catch (error) {
     res.status(500).json({ message: 'Server error' }); // Handle any errors with a 500 status
   }
@@ -79,6 +79,6 @@ export const getUserProfile = async (req: AuthenticatedRequest, res: Response) =
 
     res.json(user); // Return the user profile
   } catch (error) {
-    res.status(500).json({ message: 'Server error' }); // Handle any errors with a 500 status
+    res.status(500).json({ message: 'Server error' }); 
   }
 };

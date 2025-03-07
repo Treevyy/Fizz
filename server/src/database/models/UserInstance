@@ -1,6 +1,6 @@
 import { Model } from 'sequelize';
 
-export interface UserInstance extends Model {
+export default interface UserInstance extends Model {
   id: number;
   username: string;
   email: string;
