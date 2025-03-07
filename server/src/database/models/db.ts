@@ -2,9 +2,9 @@ import { Sequelize, Model, ModelStatic } from 'sequelize';
 import  userModel  from './userModel';
 
 interface DbInterface {
-  Sequelize?: typeof Sequelize;
-  sequelize?: Sequelize;
-  User?: ModelStatic<Model<any, any>>;
+  Sequelize: typeof Sequelize;
+  sequelize: Sequelize;
+  User: ModelStatic<Model<any, any>>;
 }
 
 const sequelize = new Sequelize(
