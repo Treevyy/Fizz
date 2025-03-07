@@ -33,8 +33,8 @@ const userModel = (sequelize: Sequelize): ModelStatic<Model<any, any>> => {
       allowNull: true,
     },
   },
-  {  
-    tableName: 'usersData',  
+  { 
+    tableName: 'users',  
 });
 };
 export default userModel ;

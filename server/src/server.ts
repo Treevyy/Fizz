@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import userRoutes from './routes/api/userRoutes';
 import authRoutes from './routes/api/authRoutes';
 // import surveyRoutes from './routes/surveyRoutes';
-import db from '../src/database/models';
+import db from './database/models/db';
 
 dotenv.config(); // Load environment variables from .env file
 
