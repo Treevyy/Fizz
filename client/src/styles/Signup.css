@@ -3,7 +3,7 @@
     margin: 40px auto;
     padding: 20px;
     text-align: center;
-    background: #222;
+    background: #000000;
     color: #fff;
     border-radius: 10px;
   }
@@ -32,7 +32,7 @@
   
   button {
     padding: 10px;
-    background-color: #3c98ff;
+    background-color: #0425cf;
     color: #fff;
     border: none;
     border-radius: 4px;
