@@ -1,20 +1,11 @@
 import { Sequelize, Model, ModelStatic } from 'sequelize';
-import dotenv from 'dotenv';
 import  userModel  from './userModel';
-
-dotenv.config();
-
-//const path = require('path');
-//const fs = require('fs');
-const env = process.env.NODE_ENV || 'development';
 
 interface DbInterface {
   Sequelize?: typeof Sequelize;
   sequelize?: Sequelize;
   User?: ModelStatic<Model<any, any>>;
 }
-
-const db: DbInterface = {};
 
 const sequelize = new Sequelize(
   process.env.DB_NAME as string,
@@ -26,8 +17,10 @@ const sequelize = new Sequelize(
   }
 );
 
-db.Sequelize = Sequelize;
-db.sequelize = sequelize;
-db.User = userModel(sequelize);
+const db: DbInterface = {
+  Sequelize,
+  sequelize,
+  User: userModel(sequelize),
+  };
 
 export default db;

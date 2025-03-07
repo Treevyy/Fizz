@@ -1,5 +1,5 @@
 import express from 'express'; // Import express for creating the router
-import  User  from '../../database/models'; // Import the User model
+import  User  from '../../database/models/db'; // Import the User model
 
 const router = express.Router(); // Create a new router
 
