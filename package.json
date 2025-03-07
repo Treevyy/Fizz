@@ -15,7 +15,7 @@
     "client:dev": "cd client && npm run dev",
     "build": "cd client && npm run build",
     "seed": "cd server && npm run seeders",
-    "seeders": "node server/dist/seeds/sync.js",
+    "seeders": "node dist/database/seeders/sync.js",
     "render-build": "npm install && npm run build"
   },
   "keywords": [],

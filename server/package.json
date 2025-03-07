@@ -10,7 +10,7 @@
     "dev": "npx nodemon",
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "node dist/seeds/sync.js",
-    "seeders": "node server/dist/seeds/sync.js"
+    "seeders": "node dist/database/seeders/sync.js"
   },
   "nodemonConfig": {
     "watch": [
