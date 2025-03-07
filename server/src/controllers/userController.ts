@@ -5,7 +5,7 @@ import { Request, Response } from 'express'; // Import Request and Response type
 
 // Function to register a new user
 export const registerUser = async (req: Request, res: Response) => {
-  const { username, email, password } = req.body; // Extract username, email, and password from the request body
+  const { username, email, password, age, gender, location, photo } = req.body; // Extract user attributes from the request body
 
   try {
     const userExists = await db.User.findOne({ where: { email } }); // Check if a user with the given email already exists
@@ -20,6 +20,10 @@ export const registerUser = async (req: Request, res: Response) => {
       username,
       email,
       password: hashedPassword, // Create a new user with the hashed password
+      age,
+      gender,
+      location,
+      photo,
     });
 
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET as string, {
@@ -60,7 +64,7 @@ export const loginUser = async (req: Request, res: Response) => {
 };
 
 // Function to get the profile of the authenticated user
-export const getUserProfile = async (req: AuthenticatedRequest, res: Response) => {
+export const getUserProfile = async (req: Request, res: Response) => {
   try {
     const user = await db.User.findByPk(req.user.id, {
       attributes: { exclude: ['password'] }, // Find the user by primary key and exclude the password from the result
