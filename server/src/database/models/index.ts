@@ -9,12 +9,10 @@ dotenv.config();
 const env = process.env.NODE_ENV || 'development';
 
 interface DbInterface {
-  Sequelize?: typeof Sequelize;
-  sequelize?: Sequelize;
-  User?: ModelStatic<Model<any, any>>;
+  Sequelize: typeof Sequelize;
+  sequelize: Sequelize;
+  User: ModelStatic<Model<any, any>>;
 }
-
-const db: DbInterface = {};
 
 const sequelize = new Sequelize(
   process.env.DB_NAME as string,
@@ -25,6 +23,12 @@ const sequelize = new Sequelize(
     dialect: 'postgres',
   }
 );
+
+const db: DbInterface = {
+  Sequelize: Sequelize,
+  sequelize: sequelize,
+  User: userModel(sequelize)
+};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
