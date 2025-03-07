@@ -13,26 +13,26 @@ const sequelize = new Sequelize(
   }
 );
 
-const Questionnaire = sequelize.define ('Questionnaire', {
-    id: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true,
-    },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    questions: {
-      type: DataTypes.JSON, 
-      allowNull: false,
-    },
-  },{
-    tableName: 'questionnaires',
+const Questionnaire = sequelize.define('Questionnaire', {
+  id: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true,
+  },
+  title: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  description: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  questions: {
+    type: DataTypes.JSON,
+    allowNull: false,
+  },
+}, {
+  tableName: 'questionnaires',
 });
 
-export default{ Questionnaire };
+export default Questionnaire;

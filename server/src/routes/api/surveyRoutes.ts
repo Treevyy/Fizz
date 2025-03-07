@@ -7,7 +7,7 @@ const router = Router();
 // GET /api/survey - returns the survey questions
 router.get('/', (req, res) => {
   // Adjust the path based on where your JSON file is located
-  const filePath = join(__dirname, 'surveyQuestions.json');
+  const filePath = join(__dirname, '../../routes/surveyQuestions.json'); // Corrected path
 
   readFile(filePath, 'utf8', (err, data) => {
     if (err) {
