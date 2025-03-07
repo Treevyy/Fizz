@@ -14,26 +14,31 @@ async function someAsyncFunction() {
 async function syncDatabase() {
   await someAsyncFunction();
 }
-if (db.Sequelize) {
-  await db.Sequelize?.sync({ force: true });
-  console.log(' We have successfully fizzed up');
-}
 
 // Optionally, you can create some initial data here
-await db.User?.create({
-  name: 'John Doe',
-  email: 'john.doe@example.com',
-  password: 'password123',
-  age: 30,
-  gender: 'Male',
-  location: 'New York',
-  photo: null,
-});
-console.log('User data created.') 
+async function initializeDatabase() {
+  await db.User?.create({
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+    password: 'password123',
+    age: 30,
+    gender: 'Male',
+    location: 'New York',
+    photo: null,
+  });
+  console.log('User data created.');
+  if (db.sequelize) {
+    await db.sequelize?.sync({ force: true });
+    console.log(' We have successfully fizzed up');
   } else {
     console.error('Sequelize instance is not defined');
   }
 }
+
+initializeDatabase().catch((err) => {
+  console.error('Error initializing database:', err);
+});
+
 
 syncDatabase().catch((err) => {
   console.error('Error syncing database:', err);

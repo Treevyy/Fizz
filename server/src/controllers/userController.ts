@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs'; // Import bcrypt for password hashing
 import jwt from 'jsonwebtoken'; // Import jsonwebtoken for creating JWT tokens
-import db from '../models'; // Import the database models
+import db from '../database/models'; // Import the database models
 import { Request, Response } from 'express'; // Import Request and Response types from express
 
 // Define an interface for authenticated requests, extending the Request interface
