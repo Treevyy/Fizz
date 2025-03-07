@@ -9,7 +9,7 @@
     "start": "npm run build && node dist/server.js",
     "dev": "npx nodemon",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node dist/seeders/sync.js"
+    "seed": "node dist/seeds/index.js"
   },
   "nodemonConfig": {
     "watch": [
