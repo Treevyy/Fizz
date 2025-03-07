@@ -1,4 +1,4 @@
-import { Sequelize, Model, DataTypes, ModelStatic } from 'sequelize';
+import { Sequelize, Model, DataTypes, } from 'sequelize';
 
 class User extends Model {
   public id!: number;

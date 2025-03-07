@@ -1,4 +1,4 @@
-import { Sequelize, Model, ModelStatic } from 'sequelize';
+import { Sequelize, } from 'sequelize';
 import  User  from './userModel';
 
 const sequelize = new Sequelize(
@@ -10,6 +10,7 @@ const sequelize = new Sequelize(
     dialect: 'postgres',
   }
 );
+
 
 const db = {
   Sequelize,

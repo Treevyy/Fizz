@@ -1,4 +1,3 @@
-
 import express from 'express';
 import dotenv from 'dotenv';
 import userRoutes from './routes/api/userRoutes';
@@ -9,7 +8,7 @@ import db from './database/models/db';
 dotenv.config(); // Load environment variables from .env file
 
 const app = express(); // Create an express application
-const PORT = process.env.PORT || 5000; // Set the port from environment variables or default to 5000
+const PORT = process.env.PORT || 3001; // Set the port from environment variables or default to 5000
 
 app.use(express.json()); // Use express.json middleware to parse JSON requests
 
