@@ -1,0 +1,42 @@
+[33m8b668c5a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mFeature/BE3[m[33m, [m[1;31morigin/seeder[m[33m)[m HEAD@{0}: pull origin seeder: Fast-forward
+[33m427b0bcf[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{1}: reset: moving to HEAD
+[33m427b0bcf[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{2}: reset: moving to HEAD
+[33m427b0bcf[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{3}: reset: moving to HEAD
+[33m427b0bcf[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{4}: checkout: moving from main to Feature/BE3
+[33m427b0bcf[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{5}: checkout: moving from Feature/BE2 to main
+[33m60d94775[m[33m ([m[1;32mFeature/BE2[m[33m)[m HEAD@{6}: checkout: moving from main to Feature/BE2
+[33m427b0bcf[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{7}: checkout: moving from Feature/BE2 to main
+[33m60d94775[m[33m ([m[1;32mFeature/BE2[m[33m)[m HEAD@{8}: reset: moving to HEAD
+[33m60d94775[m[33m ([m[1;32mFeature/BE2[m[33m)[m HEAD@{9}: commit (merge): Resolved merge conflicts
+[33m2dedc22f[m[33m ([m[1;31morigin/Feature/BE2[m[33m)[m HEAD@{10}: commit: updated index.ts
+[33m5a8e5410[m HEAD@{11}: checkout: moving from main to Feature/BE2
+[33m427b0bcf[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{12}: pull: Fast-forward
+[33m22244bab[m HEAD@{13}: pull: Fast-forward
+[33m3c338d13[m HEAD@{14}: checkout: moving from Feature/BE2 to main
+[33m5a8e5410[m HEAD@{15}: reset: moving to HEAD
+[33m5a8e5410[m HEAD@{16}: checkout: moving from main to Feature/BE2
+[33m3c338d13[m HEAD@{17}: checkout: moving from Feature/BE2 to main
+[33m5a8e5410[m HEAD@{18}: commit: packagejson update
+[33m90a31cab[m HEAD@{19}: commit: resolving commits
+[33m45d3db6d[m HEAD@{20}: pull origin main: Fast-forward
+[33m77a1e24e[m HEAD@{21}: checkout: moving from Feature/Backend to Feature/BE2
+[33ma5f72d22[m[33m ([m[1;31morigin/Feature/Backend[m[33m, [m[1;32mFeature/Backend[m[33m)[m HEAD@{22}: reset: moving to HEAD
+[33ma5f72d22[m[33m ([m[1;31morigin/Feature/Backend[m[33m, [m[1;32mFeature/Backend[m[33m)[m HEAD@{23}: commit: Resolving merge conflict
+[33m189e933c[m HEAD@{24}: commit: updated path in server
+[33ma9423f97[m HEAD@{25}: commit: added surveyRoutes declaration file
+[33m60bce6dd[m HEAD@{26}: commit: updated paths
+[33m22448b29[m HEAD@{27}: commit: updated tsconfig to resolve error
+[33m71cca74e[m HEAD@{28}: commit: updated surveyRoutes
+[33m3bbad079[m HEAD@{29}: checkout: moving from main to Feature/Backend
+[33m3c338d13[m HEAD@{30}: pull: Fast-forward
+[33m86f1d026[m[33m ([m[1;31morigin/feature/authMiddleWare[m[33m)[m HEAD@{31}: checkout: moving from Feature/Backend to main
+[33m3bbad079[m HEAD@{32}: reset: moving to HEAD
+[33m3bbad079[m HEAD@{33}: pull: Fast-forward
+[33m8708d184[m HEAD@{34}: checkout: moving from main to Feature/Backend
+[33m86f1d026[m[33m ([m[1;31morigin/feature/authMiddleWare[m[33m)[m HEAD@{35}: checkout: moving from Feature/Backend to main
+[33m8708d184[m HEAD@{36}: commit: added surveyQuestions.json and updated surveyRoutes, tsconfig
+[33m564dcecb[m HEAD@{37}: checkout: moving from main to Feature/Backend
+[33m86f1d026[m[33m ([m[1;31morigin/feature/authMiddleWare[m[33m)[m HEAD@{38}: reset: moving to HEAD
+[33m86f1d026[m[33m ([m[1;31morigin/feature/authMiddleWare[m[33m)[m HEAD@{39}: checkout: moving from Feature/Backend to main
+[33m564dcecb[m HEAD@{40}: checkout: moving from main to Feature/Backend
+[33m86f1d026[m[33m ([m[1;31morigin/feature/authMiddleWare[m[33m)[m HEAD@{41}: clone: from https://github.com/Treevyy/Fizz.git
