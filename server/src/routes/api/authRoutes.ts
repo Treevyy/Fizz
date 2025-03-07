@@ -1,7 +1,7 @@
 import express from 'express'; // Import express for creating the router
 import bcrypt from 'bcryptjs'; // Import bcrypt for password hashing
 import jwt from 'jsonwebtoken'; // Import jsonwebtoken for creating JWT tokens
-import { User } from '../../models/User'; // Import the User model
+import  User  from '../../models/user.js'; // Import the User model
 import dotenv from 'dotenv'; // Import dotenv for loading environment variables
 
 dotenv.config(); // Load environment variables from .env file
