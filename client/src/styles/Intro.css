@@ -1,0 +1,44 @@
+/* src/styles/Intro.css */
+
+/* Full-screen container with a gradient background */
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000000; 
+    /* transition: opacity 1s ease, transform 1s ease; */
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Fade out effect when clicked */
+  .intro-container.fade-out {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  
+  /* Logo wrapper */
+  .intro-logo {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for the logo */
+  .intro-logo:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Logo image sizing */
+  .logo-image {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+  }
+  
+  /* Tagline text (if not already in the image) */
+  .intro-text {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
