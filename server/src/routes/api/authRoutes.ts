@@ -12,7 +12,7 @@ router.post('/register', async (req, res) => { // Define a POST route for user r
   try {
     const { name, email, password, age, gender, location, photo } = req.body; // Extract user details from the request body
     const hashedPassword = await bcrypt.hash(password, 10); // Hash the password with bcrypt
-    const user = await User.create({ name, email, password: hashedPassword, age, gender, location, photo }); // Create a new user with the hashed password
+    const user = await User.User.create({ name, email, password: hashedPassword, age, gender, location, photo }); // Create a new user with the hashed password
     res.json({ success: true, user }); // Return the created user with a success message
   } catch (error) {
     res.status(400).json({ error: (error as Error).message }); // Handle any errors with a 400 status and return the error message
@@ -22,7 +22,7 @@ router.post('/register', async (req, res) => { // Define a POST route for user r
 router.post('/login', async (req, res) => { // Define a POST route for user login
   try {
     const { email, password } = req.body; // Extract email and password from the request body
-    const user = await User.findOne({ where: { email } }); // Find a user with the given email
+    const user = await User.User.findOne({ where: { email } }); // Find a user with the given email
     if (!user || !(await bcrypt.compare(password, user.password))) { // Check if user exists and if the password matches
       return res.status(401).json({ error: 'Invalid credentials' }); // If credentials are invalid, return a 401 status with an error message
     }
