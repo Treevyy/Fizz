@@ -1,5 +1,7 @@
 import { Sequelize, } from 'sequelize';
 import  User  from './userModel';
+import express from 'express';
+import connectDB  from '../../database/connections';
 
 const sequelize = new Sequelize(
   process.env.DB_NAME as string,
@@ -10,7 +12,11 @@ const sequelize = new Sequelize(
     dialect: 'postgres',
   }
 );
+const app = express();const PORT = process.env.PORT || 3000;
+connectDB();
 
+app.get('/', (req, res) => {  res.send('Hello, world!');});
+app.listen(PORT, () => {  console.log(`Server is running on http://localhost:${PORT}`);});
 
 const db = {
   Sequelize,
