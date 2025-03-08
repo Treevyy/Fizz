@@ -9,8 +9,8 @@
     "start": "npm run build && node dist/server.js",
     "dev": "npx nodemon",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node dist/seeders/sync.js",
-    "seeders": "node dist/seeders/sync.js"
+    "seed": "cd server && npm run seeders",
+    "seeders": "node dist/database/seeders/sync.js"
   },
   "nodemonConfig": {
     "watch": [
@@ -25,13 +25,13 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
     "dotenv": "^10.0.0",
     "express": "^4.21.2",
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^6.6.5",
-    "body-parser": "^1.20.0"
+    "sequelize": "^6.6.5"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.3",

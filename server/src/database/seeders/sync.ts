@@ -28,3 +28,4 @@ async function syncDatabase() {
 syncDatabase().catch((err) => {
   console.error('Error in syncDatabase:', err);
 });
+export default syncDatabase;
