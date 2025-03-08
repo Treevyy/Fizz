@@ -1,4 +1,4 @@
-import express, { Request, Response } from 'express'; // Import express and types for Request and Response
+import express, { Request, Response, Router } from 'express'; // Import express and types for Request and Response
 import bcrypt from 'bcryptjs'; // Import bcrypt for password hashing
 import jwt from 'jsonwebtoken'; // Import jsonwebtoken for creating JWT tokens
 import db from '../../database/models/db';
