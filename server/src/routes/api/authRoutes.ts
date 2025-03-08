@@ -1,7 +1,7 @@
 import express, { Request, Response, Router } from 'express'; // Import express and types for Request and Response
 import bcrypt from 'bcryptjs'; // Import bcrypt for password hashing
 import jwt from 'jsonwebtoken'; // Import jsonwebtoken for creating JWT tokens
-import db from '../../database/models/db';
+import db from '../../database/models/db.js';
 import dotenv from 'dotenv'; // Import dotenv for loading environment variables
 
 dotenv.config(); 

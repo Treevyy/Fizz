@@ -1,16 +1,13 @@
-import { Client } from 'pg';
+import { Sequelize } from 'sequelize';
 
-const client = new Client({
-  user: 'your_username',
+const sequelize = new Sequelize('your_database', 'your_username', 'your_password', {
   host: 'localhost',
-  database: 'your_database',
-  password: 'your_password',
-  port: 5432,
+  dialect: 'postgres', // Change this if you're using a different database
 });
 
 export const connectDB = async () => {
   try {
-    await client.connect();
+    await sequelize.authenticate();
     console.log('Database connected successfully.');
   } catch (err) {
     console.error('Database connection error:', err);
@@ -18,4 +15,4 @@ export const connectDB = async () => {
   }
 };
 
-export default connectDB;
+export default sequelize;
