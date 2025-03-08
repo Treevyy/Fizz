@@ -1,5 +1,5 @@
-import { Sequelize } from 'sequelize';
-import userModel from './userModel';
+import { Sequelize, } from 'sequelize';
+import  User  from './userModel';
 
 const sequelize = new Sequelize(
   process.env.DB_NAME as string,
@@ -11,11 +11,11 @@ const sequelize = new Sequelize(
   }
 );
 
-const User = userModel(sequelize);
 
 const db = {
+  Sequelize,
   sequelize,
-  User,
-};
+ User,
+  };
 
 export default db;
