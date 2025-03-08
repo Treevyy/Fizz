@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs'; 
-import jwt from 'jsonwebtoken'; // Import jsonwebtoken for creating JWT tokens
-import db from '../database/models/db'; // Import the database models
-import { Request, Response } from 'express'; // Import Request and Response types from express
+import jwt from 'jsonwebtoken'; 
+import db from '../database/models/db'; 
+import { Request, Response } from 'express'; 
 
 interface AuthenticatedRequest extends Request {
   user: {
@@ -12,10 +12,10 @@ interface AuthenticatedRequest extends Request {
 
 // Function to register a new user
 export const registerUser = async (req: Request, res: Response) => {
-  const { username, email, password } = req.body; // Extract username, email, and password from the request body
+  const { username, email, password } = req.body; 
 
   try {
-    const userExists = await db.User.findOne({ where: { email } }); // Check if a user with the given email already exists
+    const userExists = await db.User.findOne({ where: { email } });
 
     if (userExists) {
       return res.status(400).json({ message: 'User already exists' }); // If user exists, return a 400 status with a message
@@ -24,9 +24,11 @@ export const registerUser = async (req: Request, res: Response) => {
     const hashedPassword = await bcrypt.hash(password, 10); // Hash the password with bcrypt
 
     const user = await db.User.create({
-      username,
-      email,
-      password: hashedPassword,
+      data: {
+        username,
+        email,
+        password: hashedPassword,
+      },
     });
 
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET as string, {
