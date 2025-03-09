@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Intro.css';
-import fizzLogo from '../assets/logo.png' // Update path/name if needed
+import fizzLogo from '../assets/FIZZ_logo_white.png';
 
 function Intro() {
   const navigate = useNavigate();
