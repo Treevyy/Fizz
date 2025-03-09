@@ -12,7 +12,7 @@ interface AuthenticatedRequest extends Request {
 
 // Function to register a new user
 export const registerUser = async (req: Request, res: Response) => {
-  const { username, email, password } = req.body; 
+  const { username, email, password, age, gender, location, photo } = req.body; // Extract user attributes from the request body
 
   try {
     const userExists = await db.User.findOne({ where: { email } });
@@ -24,11 +24,13 @@ export const registerUser = async (req: Request, res: Response) => {
     const hashedPassword = await bcrypt.hash(password, 10); // Hash the password with bcrypt
 
     const user = await db.User.create({
-      data: {
-        username,
-        email,
-        password: hashedPassword,
-      },
+      username,
+      email,
+      password: hashedPassword, // Create a new user with the hashed password
+      age,
+      gender,
+      location,
+      photo,
     });
 
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET as string, {

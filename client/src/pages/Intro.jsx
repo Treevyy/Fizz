@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Intro.css';
-import fizzLogo from '../assets/logo.png' // Update path/name if needed
+import fizzLogo from '../assets/FIZZ_logo_white.png';
 
 function Intro() {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ function Intro() {
     setClicked(true);
     // After the fade-out animation finishes, go to the Login page
     setTimeout(() => {
-      navigate('/login');
+      navigate('/home');
     }, 1000); // 1-second delay
   };
 
