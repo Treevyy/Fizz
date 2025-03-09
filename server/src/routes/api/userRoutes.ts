@@ -1,8 +1,6 @@
 import { Router } from 'express';
 import User from '../../database/models/db.js';
 
-
-
 const router = Router(); 
 
 router.get('/', async (req, res) => { 

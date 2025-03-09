@@ -31,9 +31,11 @@
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.3",
+    "postgres": "^3.4.5",
     "sequelize": "^6.6.5"
   },
   "devDependencies": {
     "@types/pg": "^8.11.11"
   }
 }
+
