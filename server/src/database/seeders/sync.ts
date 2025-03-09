@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import db from "../models/db";
+import db from "../../database/models/db.js";
 
 dotenv.config();
 
@@ -13,7 +13,7 @@ async function syncDatabase() {
     await db.User.create({
       name: 'JohnDoe',
       email: 'john.doe@example.com',
-      password: 'password123',
+      password: 'password',
       age: 30,
       gender: 'Male',
       location: 'New York',
@@ -28,3 +28,4 @@ async function syncDatabase() {
 syncDatabase().catch((err) => {
   console.error('Error in syncDatabase:', err);
 });
+export default syncDatabase;
