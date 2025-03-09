@@ -1,5 +1,5 @@
 import { Sequelize, } from 'sequelize';
-import  User  from './userModel';
+import  User  from './userModel.js';
 
 const sequelize = new Sequelize(
   process.env.DB_NAME as string,

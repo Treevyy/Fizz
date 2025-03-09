@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import bcrypt from 'bcryptjs'; 
 import jwt from 'jsonwebtoken'; 
-import db  from '../../database/models/db'; 
+import db  from '../../database/models/db.js'; 
 import dotenv from 'dotenv';
 
 dotenv.config(); 
