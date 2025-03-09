@@ -69,7 +69,7 @@ export const loginUser = async (req: Request, res: Response) => {
 };
 
 // Function to get the profile of the authenticated user
-export const getUserProfile = async (req: AuthenticatedRequest, res: Response) => {
+export const getUserProfile = async (req: Request, res: Response) => {
   try {
     const user = await db.User.findByPk(req.user.id, {
       attributes: { exclude: ['password'] }, // Find the user by primary key and exclude the password from the result
