@@ -17,10 +17,11 @@ const sequelize = new Sequelize(
   }
 );
 
-const db: DbInterface = {
-  Sequelize,
+const User = userModel(sequelize);
+
+const db = {
   sequelize,
-  User: userModel(sequelize),
-  };
+  User,
+};
 
 export default db;

@@ -1,25 +1,36 @@
-import express from 'express'; // Import express for creating the router
+import express, { Request, Response } from 'express'; // Import express and types for Request and Response
 import bcrypt from 'bcryptjs'; // Import bcrypt for password hashing
 import jwt from 'jsonwebtoken'; // Import jsonwebtoken for creating JWT tokens
-import  User  from '../../database/models/db'; // Import the User model
+import db from '../../database/models/db';
 import dotenv from 'dotenv'; // Import dotenv for loading environment variables
 
 dotenv.config(); // Load environment variables from .env file
 
 const router = express.Router(); // Create a new router
+const { User } = db; // Destructure the User model so it's available in all routes
 
-router.post('/register', async (req, res) => { // Define a POST route for user registration
+// POST /register - User registration endpoint
+router.post('/register', async (req: Request, res: Response) => {
   try {
     const { name, email, password, age, gender, location, photo } = req.body; // Extract user details from the request body
     const hashedPassword = await bcrypt.hash(password, 10); // Hash the password with bcrypt
-    const user = await User.create({ name, email, password: hashedPassword, age, gender, location, photo }); // Create a new user with the hashed password
+    const user = await User.create({ 
+      username: name, 
+      email, 
+      password: hashedPassword, 
+      age, 
+      gender, 
+      location, 
+      photo 
+    }); // Create a new user
     res.json({ success: true, user }); // Return the created user with a success message
   } catch (error) {
     res.status(400).json({ error: (error as Error).message }); // Handle any errors with a 400 status and return the error message
   }
 });
 
-router.post('/login', async (req, res) => { // Define a POST route for user login
+// POST /login - User login endpoint
+router.post('/login', async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body; // Extract email and password from the request body
     const user = await User.findOne({ where: { email } }); // Find a user with the given email
@@ -29,7 +40,7 @@ router.post('/login', async (req, res) => { // Define a POST route for user logi
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET as string, { expiresIn: '1d' }); // Generate a JWT token for the user
     res.json({ success: true, token }); // Return the token with a success message
   } catch (error) {
-    res.status(500).json({error: (error as Error).message }); // Handle any errors with a 500 status and return the error message
+    res.status(500).json({ error: (error as Error).message }); // Handle any errors with a 500 status and return the error message
   }
 });
 
