@@ -1,33 +1,38 @@
 // src/pages/Home.js
 import React from 'react';
 import '../styles/Home.css';
-import { Link } from 'react-router-dom';
-import ProfileCard from '../components/ProfileCard';
+import { Link, useNavigate } from 'react-router-dom';
+import logo from '../assets/FIZZ_logo_small.png' // Update path/name if needed
+
 
 function Home() {
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
+
+  const handleSignupClick = () => {
+    navigate('/signup');
+  };
+
   return (
     <div className="home-container">
+     <img src= {logo} alt="Fizz Logo" className="logo-small" />
       {/* Header section with the logo and tagline */}
       <header className="home-header">
-        <h1 className="home-logo">fizz</h1>
-        <p className="home-tagline">Let’s Get Matching!</p>
+        <h1 className="home-logo">Start your Fizz<br /> Adventure!</h1>
+
       </header>
 
-      {/* Render the ProfileCard component */}
-      <ProfileCard
-        initialName="Alice"
-        initialAge={25}
-        zodiac="Gemini"
-        interests="Hiking, Music, Travel"
-        avatarUrl="https://via.placeholder.com/100"
-      />
-
-      {/* Call-to-action buttons for navigation */}
       <div className="cta-buttons">
-        <Link to="/signup" className="cta-btn signup-btn">Sign Up</Link>
-        <Link to="/login" className="cta-btn login-btn">Login</Link>
-        <Link to="/match" className="cta-btn match-btn">Let’s Get Match!</Link>
+        <p className="cta-label">Sign In</p>
+        <button onClick={handleLoginClick} className="cta-btn login-btn">Welcome back, Fizzter!</button>
+        
+        <p className="cta-label">New User? Join the Fizz!</p>
+        <button onClick={handleSignupClick} className="cta-btn signup-btn">Find your match!</button>
       </div>
+
     </div>
   );
 }

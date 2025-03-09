@@ -1,6 +1,22 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Signup.css';
+import logo from '../assets/FIZZ_logo_small.png' // Update path/name if needed
+
+
+const styles = {
+  button: {
+    width: '100%',
+    padding: '12px',
+    border: 'none',
+    borderRadius: '15px', // Adjusted to make the button more rounded
+    backgroundColor: '#ff1a66',
+    color: 'white',
+    fontSize: '1rem',
+    cursor: 'pointer',
+    marginTop: '10px',
+  }
+}
 
 function Signup() {
   const [name, setName] = useState('');
@@ -31,7 +47,9 @@ function Signup() {
 
   return (
     <div className="signup-container">
-      <h1>Sign Up</h1>
+   <img src= {logo} alt="Fizz Logo" className="logo-small" />
+
+      <h1>Join the Fizz Fun!</h1>
       <form onSubmit={handleSignup} className="signup-form">
         <label htmlFor="name">Name:</label>
         <input 
@@ -73,10 +91,10 @@ function Signup() {
           accept="image/*" 
         />
         {error && <p className="error">{error}</p>}
-        <button type="submit">Sign Up</button>
+        <button type="submit" style ={styles.button}>Start My Fizz Adventure! </button>
       </form>
       <p>
-        Already have an account? <Link to="/login">Login</Link>
+        Already have an account? <Link to="/login">Continue Fizzing</Link>
       </p>
     </div>
   );

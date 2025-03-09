@@ -12,7 +12,7 @@ function Intro() {
     setClicked(true);
     // After the fade-out animation finishes, go to the Login page
     setTimeout(() => {
-      navigate('/login');
+      navigate('/home');
     }, 1000); // 1-second delay
   };
 
