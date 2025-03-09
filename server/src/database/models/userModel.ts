@@ -1,4 +1,5 @@
 import { Sequelize, DataTypes, Model } from 'sequelize';
+import sequelize from '../../../src/database/connections';
 
 class User extends Model {
   public id!: number;
@@ -9,6 +10,10 @@ class User extends Model {
   public gender!: string;
   public location!: string;
   public photo?: string;
+
+    // If you need timestamps, you can uncomment these:
+  // public readonly createdAt!: Date;
+  // public readonly updatedAt!: Date;
 
   public static initialize(sequelize: Sequelize): void {
     User.init(
@@ -52,6 +57,7 @@ class User extends Model {
         sequelize,
         modelName: 'User',
         tableName: 'users',
+        timestamps: false,
       }
     );
   }

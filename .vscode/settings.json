@@ -1,3 +1,6 @@
 {
-    "editor.acceptSuggestionOnEnter": "smart"
+    "editor.acceptSuggestionOnEnter": "smart",
+    "json.schemas": [
+        
+    ]
 }
