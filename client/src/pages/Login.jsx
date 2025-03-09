@@ -1,6 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Login.css';
+import logo from '../assets/FIZZ_logo_small.png' // Update path/name if needed
+
+const styles = {
+  button: {
+    width: '100%',
+    padding: '12px',
+    border: 'none',
+    borderRadius: '15px', // Adjusted to make the button more rounded
+    backgroundColor: '#ff1a66',
+    color: 'white',
+    fontSize: '1rem',
+    cursor: 'pointer',
+    marginTop: '10px',
+  }
+}
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -20,10 +35,13 @@ function Login() {
   };
 
   return (
+    <>
+    <div className = 'login-container'>
+    <img src= {logo} alt="Fizz Logo" className="logo-small" />
     <div className="login-container">
-      <h1>Login</h1>
+      <h1>Welcome Back, Fizzter!</h1>
       <form onSubmit={handleSubmit} className="login-form">
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="email">Email</label>
         <input 
           type="email" 
           id="email" 
@@ -31,7 +49,7 @@ function Login() {
           onChange={(e) => setEmail(e.target.value)} 
           required 
         />
-        <label htmlFor="password">Password:</label>
+        <label htmlFor="password">Password</label>
         <input 
           type="password" 
           id="password" 
@@ -40,12 +58,14 @@ function Login() {
           required 
         />
         {error && <p className="error">{error}</p>}
-        <button type="submit">Login</button>
+        <button className = "submit" type="submit" style ={styles.button}>Lets Get Fizzing!</button>
       </form>
       <p>
-        Don't have an account? <Link to="/signup">Sign Up</Link>
+        Don't have an account? <Link to="/signup">Join the Fizz!</Link>
       </p>
     </div>
+    </div>
+    </>
   );
 }
 

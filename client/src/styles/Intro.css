@@ -4,7 +4,7 @@ html, body, #root {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
@@ -55,4 +55,5 @@ body {
   margin-top: 20px;
   color: #fff; /* Adjust text color as needed */
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
