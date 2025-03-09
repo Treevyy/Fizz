@@ -13,7 +13,7 @@ async function syncDatabase() {
     await db.User.create({
       name: 'JohnDoe',
       email: 'john.doe@example.com',
-      password: 'password123',
+      password: 'password',
       age: 30,
       gender: 'Male',
       location: 'New York',
