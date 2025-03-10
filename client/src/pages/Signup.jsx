@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Signup.css';
 import logo from '../assets/FIZZ_logo_small.png' // Update path/name if needed
+import { useNavigate } from 'react-router-dom';
+
 
 
 const styles = {
@@ -25,6 +27,8 @@ function Signup() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [profilePic, setProfilePic] = useState(null);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
+
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -45,9 +49,19 @@ function Signup() {
     setProfilePic(e.target.files[0]);
   };
 
+  const handleLogoClick = () => {
+    navigate('/home');
+  };
+
   return (
     <div className="signup-container">
-   <img src= {logo} alt="Fizz Logo" className="logo-small" />
+        <img 
+          src={logo} 
+          alt="Fizz Logo" 
+          className="logo-small" 
+          onClick={handleLogoClick} 
+          style={{ cursor: 'pointer' }} // Optional: Change cursor to pointer
+        />
 
       <h1>Join the Fizz Fun!</h1>
       <form onSubmit={handleSignup} className="signup-form">
