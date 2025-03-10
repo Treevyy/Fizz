@@ -2,10 +2,5 @@
 node_modules/
 jspm_packages/
 node_modules
-<<<<<<< HEAD
-.DS_Store
-assets/guy_2.ai
-=======
-
+.vscode
 .env
->>>>>>> 45d3db6d3ba2446ab32246b4125c22518f88b950
