@@ -1,6 +1,7 @@
 import * as Survey from "survey-react";
-// import "../styles/Survey.css";
 import styled from "styled-components";
+import "survey-react/survey.css"; // Keep default styles
+import "../styles/Survey.css"; // Override styles
 
 
 
@@ -12,33 +13,35 @@ const SurveyContainer = styled.div`
   margin: 40px auto;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(255, 64, 129, 0.3);
-  text-align: center;
+  box-shadow: 0px 0px 15px 5px rgba(255, 64, 129, 0.5); /* All sides */
 `;
 
-const Button = styled.button`
-  color: white;
-  `;
+
 
 const SurveyTitle = styled.h1`
   font-size: 0px;
   font-weight: bold;
   color: black;
-  text-align: center;
+  text-align: right;
   margin-bottom: 0px;
 `;
 
 const StyledSurvey = styled(Survey.Survey)`
-  .sv-container { background: #111; padding: 20px; border-radius: 8px; }
+  .sv-container { background: black; padding: 2px; border-radius: 8px; }
   .sv-title { color: #ff4081; }
   .sv-question { color: white; }
   .sv-radio__label {
     background: #222;
-    color: white;
+    color: black;
     border: 2px solid #ff4081;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 1px;
+    border-radius: 1px;
     transition: all 0.3s;
+  }
+  .sv-radio {
+    display: flex;
+    align-items: left;
+    margin-bottom: 10px;
   }
   
   .sv-radio__label:hover,
@@ -49,7 +52,7 @@ const StyledSurvey = styled(Survey.Survey)`
     cursor: pointer;
   }
   .sv-complete-btn {
-    background-color: #ff4081;
+    background-color: #blue;
     color: white;
     padding: 12px;
     border: none;
@@ -68,7 +71,7 @@ const StyledSurvey = styled(Survey.Survey)`
   }
 `;
 const surveyJSON = {
-  title: "Dating Profile Questionnaire",
+  title: "🍾    Pop the Questions!    🍾",
   showProgressBar: "top",
   pages: [
     {
