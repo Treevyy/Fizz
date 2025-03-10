@@ -1,31 +1,34 @@
 import dotenv from 'dotenv';
-import db from "../../database/models/db.js";
+import sequelize from "../models/database.js";
+import User from '../models/userModel.js';
+import bcrypt from 'bcryptjs';
 
 dotenv.config();
 
 async function syncDatabase() {
   try {
 
-    await db.sequelize?.sync({ force: true });
+    await sequelize.sync({ force: true });
     console.log(' We have successfully fizzed up');
     // test
-
-    await db.User.create({
-      name: 'JohnDoe',
+const hashedPassword = await bcrypt.hash("password", 10);
+    await User.create({
+      username: 'JohnDoe',
       email: 'john.doe@example.com',
-      password: 'password',
+      password: hashedPassword,
       age: 30,
       gender: 'Male',
       location: 'New York',
       photo: null,
     });
     console.log('User data created.');
-  } catch (error) {
+    process.exit(0)
 
+    } catch (error) {
     console.error('Error syncing database:', error);
+    process.exit(1)
   }
 }
-syncDatabase().catch((err) => {
-  console.error('Error in syncDatabase:', err);
-});
-export default syncDatabase;
+
+syncDatabase();
+
