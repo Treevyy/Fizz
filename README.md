@@ -226,7 +226,7 @@ Project Link: [https://github.com/Treevyy/Fizz](https://github.com/Treevyy/Fizz)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+</div>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
