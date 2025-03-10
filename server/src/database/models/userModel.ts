@@ -1,22 +1,12 @@
 import { Sequelize, DataTypes, Model } from 'sequelize';
-import sequelize from '../../../src/database/connections';
+import sequelize from './database.js';
 
-class User extends Model {
-  public id!: number;
-  public username!: string;
-  public email!: string;
-  public password!: string;
-  public age!: number;
-  public gender!: string;
-  public location!: string;
-  public photo?: string;
-
-    // If you need timestamps, you can uncomment these:
+class User extends Model {}
+  // If you need timestamps, you can uncomment these:
   // public readonly createdAt!: Date;
   // public readonly updatedAt!: Date;
 
-  public static initialize(sequelize: Sequelize): void {
-    User.init(
+      User.init(
       {
         id: {
           type: DataTypes.INTEGER,
@@ -60,6 +50,5 @@ class User extends Model {
         timestamps: false,
       }
     );
-  }
-}
+  
 export default User;
