@@ -22,7 +22,7 @@
     <a href="https://github.com/Treevyy/Fizz"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Treevyy/Fizz">View Demo</a>
+    <a href="assets\Fizzdemo.webm">View Demo</a>
     &middot;
     <a href="https://github.com/Treevyy/Fizz/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
@@ -68,9 +68,19 @@ With an intuitive interface and a commitment to authenticity, Fizz transforms da
 
 ### Built With
 
-* 
+* [![Vite][vite.js]][Vite-url]
 * [![React][React.js]][React-url]
-* 
+* [![Postgre][Postgres.js]][Postgres-url]
+* [![Seqelize][Sequelize.js]][Sequelize-url]
+* [![Express][Express.js]][Express-url]
+* [![node.js][node.js-url]][node.js-url]
+* [![JWT][JWT.js]][JWT-url]
+* [![Zoom][Zoom.js]][Zoom-url]
+* [![vscode][vscode.js]][vscode-url]
+* [![Discord][Discord.js]][Discord-url]
+* [![Slack][Slack.js]][Slack-url]
+* [![chatGPT][chatGPT.js]][chatGPT-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -135,9 +145,12 @@ See the [open issues](https://github.com/Treevyy/Fizz/issues) for a full list of
 
 <!-- CONTRIBUTING -->
 ## Contributing
-Carmen: Backend					      Luis: Frontend
-Christine: Backend						Saher: Frontend
-Jacquilyn: Backend 						Shawna: Frontend
+Carmen: Backend					      
+Luis: Frontend
+Christine: Backend						
+Saher: Frontend
+Jacquilyn: Backend 						
+Shawna: Frontend
 Trevor: Backend
 
 
@@ -221,3 +234,25 @@ Project Link: [https://github.com/Treevyy/Fizz](https://github.com/Treevyy/Fizz)
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[Vite-url]: https://vite.dev
+[Vite.js]: https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E
+[PostgreSQL.js]:https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
+[PostgreSQL-url]:https://www.postgresql.org/
+[Sequelize.js]: https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white
+[Sequelize-url]:https://sequelize.org
+[Express.js]:https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white
+[Express-url]:https://expressjs.com
+[node.js]: https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
+[node.js-url]:https://nodejs.org
+[JWT.js]:https://img.shields.io/badge/JWT-000000?style=for-thebadge&logo=JSON%20web%20tokens&logoColor=white
+[JWT-url]:https://jwt.oi
+[Zoom.js]: https://img.shields.io/badge/Zoom-2D8CFF?style=for-the-badge&logo=zoom&logoColor=white
+[Zoom-url]:https://zoom.us
+[vscode.js]: https://img.shields.io/badge/VSCode-0078D4?style=for-thebadge&logo=visual%20studio%20code&logoColor=white
+[vscode-url]:https://code.visualstudio.com
+[Discord.js]:https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white
+[Discord-url]:https://discord.com
+[Slack.js]:https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white
+[Slack-url]:https://slack.com
+[chatGPT.js]: https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white
+[chatGPT-url]:https://chat.openai.com
