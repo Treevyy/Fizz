@@ -31,6 +31,10 @@ const Questionnaire = sequelize.define('Questionnaire', {
     type: DataTypes.JSON,
     allowNull: false,
   },
+  userid: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  }
 }, {
   tableName: 'questionnaires',
 });
