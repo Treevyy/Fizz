@@ -1,12 +1,5 @@
 <a id="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![project_license][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -59,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![screenshot][screenshot]]
+[![Screenshot][Screenshot.png]]
 
 Fizz is a refreshing take on modern dating, designed to ignite genuine connections in a fast-paced world. Our app goes beyond endless swiping by using smart, innovative matching technology to bring you closer to people who truly resonate with your lifestyle and interests. Whether you’re looking for lasting love or a fun, new friendship, Fizz creates a safe and vibrant community where every chat feels like a spark waiting to catch fire.
 With an intuitive interface and a commitment to authenticity, Fizz transforms dating into an experience that's engaging, meaningful, and as effervescent as its name. Join us and let your social life fizz with excitement!
@@ -75,11 +68,7 @@ With an intuitive interface and a commitment to authenticity, Fizz transforms da
 * [![Express][Express.js]][Express-url]
 * [![node.js.js][node.js.js]][node.js-url]
 * [![JWT][JWT.js]][JWT-url]
-* [![Zoom][Zoom.js]][Zoom-url]
-* [![vscode][vscode.js]][vscode-url]
-* [![Discord][Discord.js]][Discord-url]
-* [![Slack][Slack.js]][Slack-url]
-* [![chatGPT][chatGPT.js]][chatGPT-url]
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -87,15 +76,14 @@ With an intuitive interface and a commitment to authenticity, Fizz transforms da
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+This Project utilizes  Vite, React, PostgreSQL, Sequelize, Express, node.js, JWT, among other
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
-  npm install npm@latest -g
+  npm install 
+
   ```
 
 ### Installation
@@ -166,12 +154,6 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Top contributors:
-
-<a href="https://github.com/github_username/repo_name/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
-</a>
-
 
 <!-- LICENSE -->
 ## License
@@ -195,9 +177,11 @@ Project Link: [https://github.com/Treevyy/Fizz](https://github.com/Treevyy/Fizz)
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [![Zoom][Zoom.js]][Zoom-url]
+* [![vscode][vscode.js]][vscode-url]
+* [![Discord][Discord.js]][Discord-url]
+* [![Slack][Slack.js]][Slack-url]
+* [![chatGPT][chatGPT.js]][chatGPT-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -205,16 +189,16 @@ Project Link: [https://github.com/Treevyy/Fizz](https://github.com/Treevyy/Fizz)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/github_Treevyy/Fizz.svg?style=for-the-badge
+[contributors-url]: https://github.com/github_Treevyy/Fizz/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/github_Treevyy/Fizz.svg?style=for-the-badge
+[forks-url]: https://github.com/github_Treevyy/Fizz/network/members
+[stars-shield]: https://img.shields.io/github/stars/github_Treevyy/Fizz.svg?style=for-the-badge
+[stars-url]: https://github.com/github_Treevyy/Fizz/stargazers
+[issues-shield]: https://img.shields.io/github/issues/github_Treevyy/Fizz.svg?style=for-the-badge
+[issues-url]: https://github.com/github_Treevyy/Fizz/issues
+[license-shield]: https://img.shields.io/github/license/github_Treevyy/Fizz.svg?style=for-the-badge
+[license-url]: https://github.com/github_Treevyy/Fizz/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
@@ -256,4 +240,5 @@ Project Link: [https://github.com/Treevyy/Fizz](https://github.com/Treevyy/Fizz)
 [Slack-url]:https://slack.com
 [chatGPT.js]: https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white
 [chatGPT-url]:https://chat.openai.com
-[screenshot]:assets\screenshot.png
+[screenshot.png]:assets\screenshot.png
+[Demo.webm]:assets\Fizzdemo.webm
