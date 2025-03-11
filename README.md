@@ -70,7 +70,7 @@ With an intuitive interface and a commitment to authenticity, Fizz transforms da
 
 * 
 * [![React][React.js]][React-url]
-* [![Vite][Vite.js]][https://vitejs.dev/]
+* 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
