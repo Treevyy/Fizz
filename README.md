@@ -1,36 +1,16 @@
-# Fizzg<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-<div style="background-image: url('assets/FIZZ_background.png'); background-size: cover; >
 
 [![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![project_license][license-shield]][license-url]
-
-
-
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/Treevyy/Fizz">
     <img src="assets\FIZZ_logo_white.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -39,18 +19,16 @@
   <p align="center">
     project_description
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Treevyy/Fizz"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/Treevyy/Fizz">View Demo</a>
     &middot;
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/Treevyy/Fizz/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/Treevyy/Fizz/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -78,35 +56,23 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[!screenshot](assets\screenshot.png)
 
 Fizz is a refreshing take on modern dating, designed to ignite genuine connections in a fast-paced world. Our app goes beyond endless swiping by using smart, innovative matching technology to bring you closer to people who truly resonate with your lifestyle and interests. Whether you’re looking for lasting love or a fun, new friendship, Fizz creates a safe and vibrant community where every chat feels like a spark waiting to catch fire.
 With an intuitive interface and a commitment to authenticity, Fizz transforms dating into an experience that's engaging, meaningful, and as effervescent as its name. Join us and let your social life fizz with excitement!
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ### Built With
 
 * 
 * [![React][React.js]][React-url]
-* 
-* 
-* 
-* 
-* 
-* 
+* [![Vite][Vite.js]][https://vitejs.dev/]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -138,7 +104,7 @@ This is an example of how to list things you need to use the software and how to
    const API_KEY = 'ENTER YOUR API';
    ```
 5. cd server than  build. (npm run build)
-  cd .. in root run application (npm run dev)
+  cd .. in root run application 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -153,8 +119,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -163,7 +127,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Treevyy/Fizz/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,7 +160,6 @@ Don't forget to give the project a star! Thanks again!
 </a>
 
 
-
 <!-- LICENSE -->
 ## License
 
@@ -216,7 +179,6 @@ Project Link: [https://github.com/Treevyy/Fizz](https://github.com/Treevyy/Fizz)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
@@ -226,7 +188,7 @@ Project Link: [https://github.com/Treevyy/Fizz](https://github.com/Treevyy/Fizz)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-</div>
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
