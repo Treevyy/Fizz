@@ -13,17 +13,13 @@ router.post('/register', async (req: Request, res: Response) => {
   try {
     const { username, email, password, age, gender, location, photo } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
-<<<<<<< HEAD
-    const user = await User.create({ username, email, password: hashedPassword, age, gender, location, photo });
-    res.json({ success: true, user });
-=======
     const newUser = await user.create({ username, email, password: hashedPassword, age, gender, location, photo });
     res.json({ success: true, newUser });
->>>>>>> 517d2844f234a943782d7144ea5f7fa6d34bf044
-  } catch (error) {
-    res.status(400).json({ error: (error as Error).message });
-  }
-});
+    } catch (error) {
+      res.status(400).json({ error: (error as Error).message });
+    }
+  });
+
 
 // POST /login - User login endpoint
 router.post('/login', async (req: Request, res: Response) => {
