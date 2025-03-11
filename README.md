@@ -59,7 +59,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[!screenshot](assets\screenshot.png)
+[![screenshot][screenshot]]
 
 Fizz is a refreshing take on modern dating, designed to ignite genuine connections in a fast-paced world. Our app goes beyond endless swiping by using smart, innovative matching technology to bring you closer to people who truly resonate with your lifestyle and interests. Whether you’re looking for lasting love or a fun, new friendship, Fizz creates a safe and vibrant community where every chat feels like a spark waiting to catch fire.
 With an intuitive interface and a commitment to authenticity, Fizz transforms dating into an experience that's engaging, meaningful, and as effervescent as its name. Join us and let your social life fizz with excitement!
@@ -70,10 +70,10 @@ With an intuitive interface and a commitment to authenticity, Fizz transforms da
 
 * [![Vite][vite.js]][Vite-url]
 * [![React][React.js]][React-url]
-* [![Postgre][Postgres.js]][Postgres-url]
+* [![PostgreSQL][PostgreSQL.js]][PostgreSQL-url]
 * [![Seqelize][Sequelize.js]][Sequelize-url]
 * [![Express][Express.js]][Express-url]
-* [![node.js][node.js-url]][node.js-url]
+* [![node.js.js][node.js.js]][node.js-url]
 * [![JWT][JWT.js]][JWT-url]
 * [![Zoom][Zoom.js]][Zoom-url]
 * [![vscode][vscode.js]][vscode-url]
@@ -242,7 +242,7 @@ Project Link: [https://github.com/Treevyy/Fizz](https://github.com/Treevyy/Fizz)
 [Sequelize-url]:https://sequelize.org
 [Express.js]:https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white
 [Express-url]:https://expressjs.com
-[node.js]: https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
+[node.js.js]:https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
 [node.js-url]:https://nodejs.org
 [JWT.js]:https://img.shields.io/badge/JWT-000000?style=for-thebadge&logo=JSON%20web%20tokens&logoColor=white
 [JWT-url]:https://jwt.oi
@@ -256,3 +256,4 @@ Project Link: [https://github.com/Treevyy/Fizz](https://github.com/Treevyy/Fizz)
 [Slack-url]:https://slack.com
 [chatGPT.js]: https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white
 [chatGPT-url]:https://chat.openai.com
+[screenshot]:assets\screenshot.png
