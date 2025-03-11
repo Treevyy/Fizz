@@ -7,6 +7,7 @@ import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import Match from './pages/Match';
 import Home from './pages/Home';
+import SurveyComponent from './pages/Survey';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/match" element={<Match />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/survey" element={<SurveyComponent />} />
       </Routes>
     </Router>
   );

@@ -1,126 +1,104 @@
-/* Apply Fizz Dark Theme */
-/* .survey-container {
-    background-color: #000 !important;
-    color: white !important;
-    font-family: 'Arial', sans-serif !important;
-    max-width: 600px !important;
-    margin: 40px auto !important;
-    padding: 20px !important;
-    border-radius: 12px !important;
-    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.3) !important;
-  } */
-  
-  /* Survey Title Styling */
-  /* .sv-title {
-    font-size: 24px !important;
-    font-weight: bold !important;
-    color: white !important;
-    text-align: center !important;
-    margin-bottom: 15px !important;
-  }
-   */
-  /* Progress Bar */
-  /* .sv-progress {
-    height: 8px !important;
-    background-color: #222 !important;
-    border-radius: 4px !important;
-  }
-  .sv-progress__bar {
-    background-color: #ff4081 !important;
-    height: 100% !important;
-    border-radius: 4px !important;
-  }
-   */
-  /* Question Styling */
-  /* .sv-question {
-    margin: 20px 0 !important;
-    font-size: 18px !important;
-    color: white !important;
-  }
-   */
-  /* Radio Button Custom Styling */
-  /* .sv-question__radiogroup .sv-radio__label {
-    display: flex !important;
-    align-items: center !important;
-    padding: 12px !important;
-    margin-bottom: 10px !important;
-    background: #111 !important;
-    border: 2px solid #ff4081 !important;
-    border-radius: 8px !important;
-    transition: all 0.3s !important;
-    color: blue !important;
-  }
-   */
-  /* .sv-question__radiogroup .sv-radio__label:hover,
-  .sv-question__radiogroup input:checked + .sv-radio__label {
-    background-color: #ff4081 !important;
-    color: white !important;
-    border-color: #ff4081 !important;
-  } */
-  
-  /* Submit Button */
-  /* .sv-complete-btn {
-    display: block !important;
-    width: 100% !important;
-    padding: 12px !important;
-    background-color: #ff4081 !important;
-    color: white !important;
-    border: none !important;
-    border-radius: 8px !important;
-    font-size: 16px !important;
-    cursor: pointer !important;
-    transition: background 0.3s !important;
-  }
-  
-  .sv-complete-btn:hover {
-    background-color: #e5005a !important;
-  }
-  
-  .sv-page-title {
-    display: none;
-  }
-   */
-  /* title {
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
-  } */
 
-  .sd-container-modern{
-    background-color: #000 !important;
-    color: white !important;
-    font-family: 'Arial', sans-serif !important;
-    max-width: 600px !important;
-    margin: 40px auto !important;
-    padding: 20px !important;
-    border-radius: 12px !important;
-    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.3) !important;
-  }
+h3 {
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+}
 
-  .sd-title {
-    color: white !important;
-    text-align: center !important;
-    /* margin-bottom: 15px !important; */
-  }
-
-  .sd-progress {
-    height: 8px !important;
-    background-color: #222 !important;
-    border-radius: 4px !important;
-    margin: 4px !important;
-  }
-/*   
-  .sd-progress__bar {
-    background-color: #ff4081 !important;
-    height: 100% !important;
-    border-radius: 4px !important;
-  } */
-
-  .sd-selectbase__label{
-    font-size: 1rem !important;
-    text-align: center !important;
-    padding: 0 !important;
-    margin: 0 !important;
-
-  }
+div {
+  background-color: black;
+  padding: 0px;
+  margin: 0px;
+  border: none; /* Remove any border */
+  border-width: 0; /* Ensure border width is 0 */
+  border-style: none; /* Ensure border style is none */
+  border-color: transparent; /* Ensure border color is transparent */
   
+}
+
+
+h5{ 
+  color: white;
+}
+
+input{ 
+  color: blue;
+}
+
+label {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.sv_body.sv_body--static {
+  background-color: black !important; /* Dark background */
+  color: rgb(56, 56, 56);
+  padding: 0px;
+  border-radius: 10px;
+  border-top: black;
+}
+
+.sv_progress_bar {
+  background-color: #ff4081 !important; /* Pink progress bar */
+  height: 1px;
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+.sv_nav_btn.sv_next_btn {
+  background-color: #ff4081 !important; /* Pink button */
+  color: white !important;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sv_nav_btn.sv_next_btn:hover {
+  background-color: #e5005a !important; /* Darker pink on hover */
+}
+
+.sv_nav_btn.sv_prev_btn {
+  background-color: #ff4081 !important; /* Pink button */
+  color: white !important;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sv_nav_btn.sv_prev_btn:hover {
+  background-color: #e5005a !important; /* Darker pink on hover */
+}
+
+.sv_nav_btn.sv_complete_btn {
+  background-color: #ff4081 !important; /* Pink button */
+  color: white !important;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sv_nav_btn.sv_complete_btn:hover {
+  background-color: #e5005a !important; /* Darker pink on hover */
+
+}
+
+.sv_body.sv_completed_page {
+  background-color: black !important; /* Dark background */
+  color: white !important;
+  text-align: center;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.sv_body.sv_completed_page {
+  /* Your styles here */
+  color: black;
+  border-top: black;
+}
