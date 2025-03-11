@@ -7,14 +7,14 @@ import { Op } from 'sequelize';
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3002;
+const port = process.env.PORT || 3001;
 
 app.use(express.json());
 
-interface User {
-  id: number;
-  name: string;
-  inter: string[];
+interface Answers {
+  title: string;
+  answers: string[];
+  userid: number;
 }
 
 const countMatchingAnswers = (answers1: string[], answers2: string[]): number => {
@@ -22,24 +22,20 @@ const countMatchingAnswers = (answers1: string[], answers2: string[]): number =>
 };
 
 app.post('/api/match', authenticateToken, async (req: Request, res: Response) => {
-  const currentUser = req.body.user as User;
+  const currentUser = req.body.user as Answers;
 
-  if (!currentUser || !currentUser.name || !Array.isArray(currentUser.inter)) {
+  if (!currentUser || !currentUser.userid || !Array.isArray(currentUser.answers)) {
     return res.status(400).json({ error: 'Invalid user data' });
   }
 
   try {
-    const dbUsers = await UserModel.findAll({
-      where: {
-        id: { [Op.ne]: currentUser.id }
-      }
-    });
-    const users: User[] = dbUsers.map(userInstance => {
-      const userData = userInstance.toJSON() as User;
+    const dbUsers = await UserModel.findAll({});
+    const users: Answers[] = dbUsers.map(userInstance => {
+      const userData = userInstance.toJSON() as Answers;
       return userData;
     });
     const matches = users.filter(user =>
-      countMatchingAnswers(currentUser.inter, user.inter) >= 4
+      countMatchingAnswers(currentUser.answers, user.answers) >= 4
     );
 
     res.json({ user: currentUser, matches });
