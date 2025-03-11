@@ -43,6 +43,7 @@ function Signup() {
     setError('');
     // TODO: Add API call to register the user
     console.log('Signup data:', { name, email, password, profilePic });
+    navigate('/survey');
   };
 
   const handleFileChange = (e) => {

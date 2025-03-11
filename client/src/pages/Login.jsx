@@ -34,10 +34,12 @@ function Login() {
     setError('');
     // TODO: Add authentication API call here
     console.log('Logging in with:', email, password);
+    navigate('/match');
   };
 
   const handleLogoClick = () => {
     navigate('/home');
+    
   };
 
 

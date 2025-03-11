@@ -1,5 +1,6 @@
 import * as Survey from "survey-react";
 import styled from "styled-components";
+import { useNavigate } from 'react-router-dom';
 import "survey-react/survey.css"; // Keep default styles
 import "../styles/Survey.css"; // Override styles
 
@@ -237,12 +238,24 @@ const surveyJSON = {
   ]
 };
 
+
 const SurveyComponent = () => {
+  const navigate = useNavigate();
+
+  const handleComplete = () => {
+    setTimeout(() => {
+      navigate('/match');
+    }, 2000); // 3-second delay
+  };
+
   const survey = new Survey.Model(surveyJSON);
   survey.onComplete.add((sender) => {
     console.log("Survey results: ", sender.data);
     // You can also send the data to your backend API here.
+    handleComplete();
   });
+
+
   return (
     <SurveyContainer>
       <SurveyTitle>{surveyJSON.title}</SurveyTitle>
