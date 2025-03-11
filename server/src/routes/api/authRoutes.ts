@@ -15,10 +15,11 @@ router.post('/register', async (req: Request, res: Response) => {
     const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = await user.create({ username, email, password: hashedPassword, age, gender, location, photo });
     res.json({ success: true, newUser });
-  } catch (error) {
-    res.status(400).json({ error: (error as Error).message });
-  }
-});
+    } catch (error) {
+      res.status(400).json({ error: (error as Error).message });
+    }
+  });
+
 
 // POST /login - User login endpoint
 router.post('/login', async (req: Request, res: Response) => {
