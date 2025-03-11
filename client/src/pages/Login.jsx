@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Login.css';
 import logo from '../assets/FIZZ_logo_small.png' // Update path/name if needed
+import { useNavigate } from 'react-router-dom';
 
 const styles = {
   button: {
@@ -21,6 +22,7 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,12 +34,25 @@ function Login() {
     setError('');
     // TODO: Add authentication API call here
     console.log('Logging in with:', email, password);
+    navigate('/match');
   };
+
+  const handleLogoClick = () => {
+    navigate('/home');
+    
+  };
+
 
   return (
     <>
     <div className = 'login-container'>
-    <img src= {logo} alt="Fizz Logo" className="logo-small" />
+    <img 
+          src={logo} 
+          alt="Fizz Logo" 
+          className="logo-small" 
+          onClick={handleLogoClick} 
+          style={{ cursor: 'pointer' }} // Optional: Change cursor to pointer
+        />
     <div className="login-container">
       <h1>Welcome Back, Fizzter!</h1>
       <form onSubmit={handleSubmit} className="login-form">
