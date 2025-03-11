@@ -99,12 +99,14 @@ This Project utilizes  Vite, React, PostgreSQL, Sequelize, Express, node.js, JWT
 4. cd server than  build. (npm run build)
   
   cd .. in root run application (npm run dev)
+   
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- USAGE EXAMPLES -->
+  to see the application live https://fizz-pv3d.onrender.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
