@@ -6,7 +6,7 @@ import dotenv from 'dotenv'; // Import dotenv for loading environment variables
 
 dotenv.config(); 
 
-const router =Router(); 
+const router = Router(); 
 
 // POST /register - User registration endpoint
 router.post('/register', async (req: Request, res: Response) => {
@@ -31,12 +31,13 @@ router.post('/login', async (req: Request, res: Response) => {
     const token = jwt.sign({ id: loginUser.dataValues.id }, process.env.JWT_SECRET as string, { expiresIn: '1d' });
     res.json({ success: true, token });
   } catch (error) {
-    res.status(400).json({  error: (error as Error).message });
+    res.status(400).json({ error: (error as Error).message });
   }
 });
 
 router.get('/test', async (req: Request, res: Response) => {
-const getAllUsers = await user.findAll();
-res.json({ success: true, getAllUsers });
+  const getAllUsers = await user.findAll();
+  res.json({ success: true, getAllUsers });
 });
-export default router; 
+
+export default router;

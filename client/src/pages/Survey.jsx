@@ -252,6 +252,7 @@ const SurveyComponent = () => {
   survey.onComplete.add((sender) => {
     console.log("Survey results: ", sender.data);
     // You can also send the data to your backend API here.
+    
     handleComplete();
   });
 
